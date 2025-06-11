@@ -1,1 +1,1 @@
-"# Paperfold-Studio" 
+"Paperfold-Studio" 
