@@ -54,7 +54,7 @@ public class ProgressionSystem : MonoBehaviour
             {
                 set.Completed = true;
                 skillPoints += 1;
-                UIController.Instance.PlaySetComplete();
+                UIController.Instance.PlaySetComplete(set.Name);
             }
         }
     }

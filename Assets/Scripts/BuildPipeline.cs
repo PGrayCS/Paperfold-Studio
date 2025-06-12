@@ -15,5 +15,16 @@ public class BuildPipelineScript
         BuildReport report = BuildPipeline.BuildPlayer(options);
         Debug.Log(report.summary.result);
     }
+
+    [MenuItem("Build/Build WebGL")]
+    public static void BuildWebGL()
+    {
+        BuildPlayerOptions options = new BuildPlayerOptions();
+        options.locationPathName = "Build/WebGL";
+        options.target = BuildTarget.WebGL;
+        options.scenes = new[] { "Assets/Scenes/Main.unity" };
+        BuildReport report = BuildPipeline.BuildPlayer(options);
+        Debug.Log(report.summary.result);
+    }
 }
 #endif
