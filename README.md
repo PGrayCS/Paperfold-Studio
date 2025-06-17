@@ -4,7 +4,7 @@ Paperfold Studio is an idle-clicker game. This repository contains the original 
 
 ## Playing in the Browser
 
-Open `Web/index.html` in any modern browser. The web version implements folding, assistants, origami set progression, skills, prestige and saving/loading using `localStorage`.
+Open `Web/index.html` in any modern browser. The web version implements folding, assistants, factories, achievements, a daily bonus system, an expanded skill tree, origami set progression, prestige and saving/loading using `localStorage`.
 
 ## Unity Project Requirements
 
@@ -41,7 +41,10 @@ Open `Web/index.html` in any modern browser. The web version implements folding,
 
 - **Origami Sets:** Edit `ProgressionSystem.cs` or modify `Web/game.js` to add new sets.
 - **Skills:** Adjust `SkillTree.cs` or the browser code to define new upgrades.
+- **Achievements:** Extend the `achievements` array in `Web/game.js`.
+- **Factories:** Tune `factoryLevel` or costs in the browser script.
 - **Gallery Assets:** Place art in `Assets/Addressables` and mark them as addressable via Unity's Addressables system.
+- **Daily Bonus:** The browser version grants 50 folds once per day on load.
 
 ## Project Version
 

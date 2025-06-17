@@ -58,3 +58,7 @@ ul {
 li {
   margin: 5px 0;
 }
+
+#achievement-list li.unlocked {
+  color: green;
+}
