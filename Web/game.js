@@ -15,6 +15,7 @@ const prestigeInfo = document.getElementById('prestige-info');
 const prestigeButton = document.getElementById('prestige-button');
 const saveButton = document.getElementById('save-button');
 const loadButton = document.getElementById('load-button');
+const paper = document.getElementById('paper');
 
 let foldCount = 0;
 let foldsPerClick = 1;
@@ -248,6 +249,10 @@ function dailyBonus() {
 // Event wiring
 foldButton.addEventListener('click', () => {
   addFold(foldsPerClick);
+  paper.classList.remove('fold');
+  // Trigger reflow to restart animation
+  void paper.offsetWidth;
+  paper.classList.add('fold');
 });
 
 hireAssistantButton.addEventListener('click', hireAssistant);
