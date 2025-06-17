@@ -62,3 +62,29 @@ li {
 #achievement-list li.unlocked {
   color: green;
 }
+
+#paper {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  transform-style: preserve-3d;
+  transform-origin: top;
+}
+
+@keyframes foldAnimation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+#paper.fold {
+  animation: foldAnimation 0.5s ease;
+}
