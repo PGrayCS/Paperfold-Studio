@@ -16,6 +16,7 @@ const prestigeButton = document.getElementById('prestige-button');
 const saveButton = document.getElementById('save-button');
 const loadButton = document.getElementById('load-button');
 const paper = document.getElementById('paper');
+const gameContainer = document.getElementById('game-container');
 
 let foldCount = 0;
 let foldsPerClick = 1;
@@ -247,8 +248,16 @@ function dailyBonus() {
 }
 
 // Event wiring
-foldButton.addEventListener('click', () => {
+foldButton.addEventListener('click', (e) => {
   addFold(foldsPerClick);
+
+  // Position the paper at the mouse click location
+  const rect = gameContainer.getBoundingClientRect();
+  const x = e.clientX - rect.left - paper.offsetWidth / 2;
+  const y = e.clientY - rect.top - paper.offsetHeight / 2;
+  paper.style.left = `${x}px`;
+  paper.style.top = `${y}px`;
+
   paper.classList.remove('fold');
   // Trigger reflow to restart animation
   void paper.offsetWidth;

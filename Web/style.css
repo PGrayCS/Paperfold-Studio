@@ -8,6 +8,7 @@ body {
 }
 
 #game-container {
+  position: relative;
   display: inline-block;
   padding: 30px;
   border-radius: 12px;
@@ -64,13 +65,16 @@ li {
 }
 
 #paper {
+  position: absolute;
   width: 100px;
   height: 100px;
-  margin: 20px auto;
+  left: 0;
+  top: 0;
   background: #ffffff;
   border: 1px solid #ccc;
   transform-style: preserve-3d;
   transform-origin: top;
+  pointer-events: none;
 }
 
 @keyframes foldAnimation {
